@@ -10,14 +10,29 @@ def test_fizzbuzz_object():
     assert isinstance(fizz_buzz, FizzBuzz)
 
 
-def test_check_entries_are_integers():
+def test_check_valid_entries(valid_entries):
     """
-    Test will check that entries are valid integers
+    Test will check that entries can be converted to valid integers
     """
     fizz_buzz = FizzBuzz()
-    result = fizz_buzz.check_entries_are_integers()
+    result = fizz_buzz.check_entries_are_integers(
+        first_entry=valid_entries[0], second_entry=valid_entries[1]
+    )
 
     assert result
+    assert isinstance(result, list)
+
+
+def test_check_invalid_entries(invalid_entries):
+    """
+    Test will check if entries are valid
+    """
+    fizz_buzz = FizzBuzz()
+    result = fizz_buzz.check_entries_are_integers(
+        first_entry=invalid_entries[0], second_entry=invalid_entries[1]
+    )
+
+    assert result is False
 
 
 def test_check_entries_are_btw_one_and_hundred():
