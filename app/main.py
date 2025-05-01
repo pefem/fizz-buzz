@@ -14,6 +14,10 @@ def main():
     values = fizz_buzz.check_entries_are_integers(
         first_entry=first_entry, second_entry=second_entry
     )
+    values = fizz_buzz.check_entries_are_btw_one_and_hundred(
+        integer_one=values[0], integer_two=values[1]
+    )
+    input(values)
 
 
 if __name__ == "__main__":

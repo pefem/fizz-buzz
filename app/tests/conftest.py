@@ -3,7 +3,7 @@ import pytest
 
 @pytest.fixture()
 def valid_entries():
-    return ("3", "5")
+    return ["3", "5"]
 
 
 @pytest.fixture()
