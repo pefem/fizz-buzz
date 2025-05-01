@@ -44,7 +44,22 @@ class FizzBuzz:
             if 1 < integer < 100:
                 integer_entries.append(integer)
             else:
-                logging.info("integer: %s is not within the expected range", integer)
+                logging.error("integer: %s is not within the expected range", integer)
                 return False
 
         return integer_entries
+
+    @staticmethod
+    def check_second_int_gt_first_int(
+        integer_one: int, integer_two: int
+    ) -> List[int] | bool:
+        """
+        Function will check if the second integer is less than the first
+        """
+        # perhaps this does not need to be fixed integers can be sorted in ascending order to ensure the first is always smaller
+
+        if integer_one >= integer_two:
+            logging.error("Second integer must be greater than the first")
+            return False
+
+        return [integer_one, integer_two]
