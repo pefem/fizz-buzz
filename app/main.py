@@ -17,7 +17,11 @@ def main():
     values = fizz_buzz.check_entries_are_btw_one_and_hundred(
         integer_one=values[0], integer_two=values[1]
     )
-    values = fizz_buzz.check_second_int_gt_first_int(integer_one=values[0], integer_two=values[1])
+    values = fizz_buzz.check_second_int_gt_first_int(
+        integer_one=values[0], integer_two=values[1]
+    )
+
+    fizz_buzz.process_integers(integer_one=values[0], integer_two=values[1])
 
 
 if __name__ == "__main__":

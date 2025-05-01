@@ -1,6 +1,8 @@
 import logging
 from typing import List
 
+from app.enums.output_enums import OutputEnums
+
 logging.basicConfig(level=logging.INFO)
 
 
@@ -63,3 +65,26 @@ class FizzBuzz:
             return False
 
         return [integer_one, integer_two]
+
+    def process_integers(self, integer_one: int, integer_two: int) -> List[str]:
+        """
+        Function processes integers and prints out the required output if the condition is met
+        """
+
+        results = []
+
+        for integer in range(integer_one, integer_two + 1):
+            logging.info(integer)
+
+            if integer % 3 == 0:
+                output = f"{integer}, {OutputEnums.FIZZ}"
+                print(output)
+                results.append(output)
+
+            if integer % 5 == 0:
+                output = f"{integer}, {OutputEnums.BUZZ}"
+                print(output)
+                results.append(output)
+
+        logging.info("Process Completed")
+        return results
