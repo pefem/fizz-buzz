@@ -1,7 +1,5 @@
 # A Simple FizzBuzz App
 
-## Please switch to develop branch to clone this repo
-
 This repo contains a simple fizzbuzz app which takes two integers between 1 and 100 and loops from the first to the second outputting each integer. During iteration if an integer is divisible by 3 "fizz" is printed out, if integer is divisible by 5 "buzz" is printed out.
 
 ## Repository Structure
